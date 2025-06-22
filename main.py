@@ -11,7 +11,7 @@ st.set_page_config(
     page_icon='random'
 )
 
-st.header('**PAINEL DE PREÇOS DE FECHAMENTO E DIVIDENDOS DE AÇÕES DA B3 E A THAI CAGA GROSSO**')
+st.header('**PAINEL DE PREÇOS DE FECHAMENTO E DIVIDENDOS DE AÇÕES DA B3**')
 
 ticker = st.text_input('Digite o ticker da ação', 'PETR4')
 empresa = yf.Ticker(f'{ticker}.SA')
