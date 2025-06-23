@@ -1,7 +1,7 @@
 #pip install streamlit
 #pip install yfinance
-import streamlit as st
-import yfinance as yf
+import streamlit as st # type: ignore
+import yfinance as yf # type: ignore
 
 #  do Streamlit é fundamental para configurar a aparência e o comportamento da sua aplicação web. Ela deve ser a primeira chamada do Streamlit no seu script e só pode ser chamada uma vez por página (no caso de aplicativos de várias páginas, você a chama no início de cada arquivo de página).
 
@@ -26,7 +26,7 @@ with col1:
     st.write(f'**Empresa**: {empresa.info['longName'] if 'longName' in empresa.info else "N/A"}')
 
 with col2:
-    st.write(f'**Mercado**: {empresa.info['market']}')
+    st.write(f'**Mercado**: {empresa.info['industry'] if 'industry' in empresa.info else "N/A"}')
 
 with col3:
     st.write(f'**Preço Atual**: {empresa.info['currentPrice']}')
